@@ -1,0 +1,62 @@
+<!--  ./views/index.handlebars -->
+<div class="container py-5">
+
+  <div class="row">
+    <div class="col-12 col-lg-10 col-xl-8 mx-auto">
+      <h1 class="card-title text-center">你想對誰說幹話？</h1>
+
+      <form method="POST" action="/">
+
+        <div class="form-group row mt-5">
+          <div class="row mx-auto w-100">
+            <div class="form-check col-4 text-center">
+              <div class="card mb-3">
+                <div
+                  class="card-img-top"
+                  style="padding-top: 100%; background: url(https://images.unsplash.com/photo-1536104968055-4d61aa56f46a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80) no-repeat center"
+                ></div>
+              </div>
+              <input class="form-check-input" type="radio" name="target" id="engineer" value="engineer" {{#if engineer}} checked {{/if}}>
+              <label class="form-check-label" for="engineer">
+                工程師
+              </label>
+            </div>
+            <div class="form-check col-4 text-center">
+              <div class="card mb-3">
+                <div
+                  class="card-img-top w-100"
+                  style="padding-top: 100%; background: url(https://images.unsplash.com/flagged/photo-1576076873449-f9530e1c50f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80) no-repeat center"
+                ></div>
+              </div>
+              <input class="form-check-input" type="radio" name="target" id="designer" value="designer" {{#if designer}} checked {{/if}}>
+              <label class="form-check-label" for="designer">
+                設計師
+              </label>
+            </div>
+            <div class="form-check col-4 text-center">
+              <div class="card mb-3">
+                <div
+                  class="card-img-top w-100"
+                  style="padding-top: 100%; background: url(https://images.unsplash.com/photo-1555474488-d2282fe0593f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=60) no-repeat center"
+                ></div>
+              </div>
+              <input class="form-check-input" type="radio" name="target" id="entrepreneur" value="entrepreneur" {{#if entrepreneur}} checked {{/if}}>
+              <label class="form-check-label" for="entrepreneur">
+                創業家
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row d-flex mt-5">
+          <div class="mr-3">
+            <button class="btn btn-outline-dark" type="submit">產生幹話</button>
+          </div>
+          <div class="flex-grow-1">
+            <textarea class="w-100" rows="5">{{bullshit}}</textarea>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
