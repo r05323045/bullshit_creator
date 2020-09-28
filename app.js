@@ -14,16 +14,16 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 // setting routes
 app.get('/', (req, res) => {
-  const bullshit = ""
-  console.log(bullshit)
-  res.render('index', bullshit)
+  const bullshit = ''
+  const engineer = true
+  res.render('index', { bullshit, engineer })
 })
 
 app.post('/', (req, res) => {
   const option = req.body.target
   const bullshit = bullshitCreator(option)
-  const {engineer, designer, entrepreneur} = {engineer: option === 'engineer', designer: option === 'designer', entrepreneur: option === 'entrepreneur'}
-  res.render('index', { bullshit, option, engineer, designer, entrepreneur})
+  const { engineer, designer, entrepreneur } = { engineer: option === 'engineer', designer: option === 'designer', entrepreneur: option === 'entrepreneur' }
+  res.render('index', { bullshit, option, engineer, designer, entrepreneur })
 })
 //
 
